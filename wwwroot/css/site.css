@@ -8,15 +8,95 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: lightcoral;
   position: relative;
-  min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
+
+
+.main {
+  position: absolute;
+  /* position: absolute; */
+  top: 5px;
+  left: 5px;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  background-color: lightpink;
+  border: 3px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  border: 2px red solid;
+}
+
+.mugshot {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  border-radius: 50%;
+  position: absolute;
+  top: 2%;
+}
+
+.boxes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border: 1px dashed teal;
+}
+
+.display-box {
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  border-radius: 20%;
+  /* position: absolute; */
+}
+
+/* .portfolio {
+  z-index: 10;
+  bottom: 125%;
+}
+
+.github {
+  z-index: 10;
+  bottom: 125%;
+  left: 25%;
+}
+
+.resume {
+  z-index: 10;
+  bottom: 125%;
+  left: 50%;
+}
+
+.interests {
+  z-index: 10;
+  bottom: 125%;
+  left: 75%;
+} */
