@@ -22,35 +22,123 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: lightcoral;
+  background: #1f1f1f;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
+  z-index: 10;
 }
+
 
 .main {
   position: absolute;
-  /* position: absolute; */
-  top: 5px;
-  left: 5px;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
   height: calc(100% - 10px);
-  width: calc(100% - 10px);
-  background-color: lightpink;
-  border: 3px solid yellow;
+  width: calc(100% - 15px);
+  /* background-color: lightpink; */
+  /* border: 3px solid yellow; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border-radius: 10px;
+  margin: 0;
 }
 
 .main-container {
   width: 100%;
   max-width: fit-content;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border: 2px red solid;
+  border-radius: 10px;
+  background: #303030;
+  color: whitesmoke;
+  position: relative;
+  margin: 0;
+  padding: 10px;
+  /* overflow: hidden; */
+}
+
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.main-container::after,
+.main-container::before {
+  content: '';
+  position: absolute;
+  height: calc(100% + 8px);
+  width: calc(100% + 8px);
+  background-image: conic-gradient(from var(--angle), transparent, #EECF6D, transparent, #6CA6C1);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+
+}
+
+.main-container::before {
+  content: '';
+  filter: blur(1rem);
+  opacity: 0.5;
+}
+
+@keyframes borderPath {
+  0% {
+    border-top-color: black;
+    /* Top border starts as red */
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  25% {
+    border-top-color: transparent;
+    border-right-color: black;
+    /* Right border becomes blue */
+  }
+
+  50% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: black;
+    /* Bottom border becomes green */
+  }
+
+  75% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: black;
+    /* Left border becomes yellow */
+  }
+
+  100% {
+    border-top-color: black;
+    /* Start again with top border red */
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
 }
 
 .mugshot {
@@ -70,7 +158,6 @@ body {
   justify-content: center;
   align-items: center;
   /* gap: 20px; */
-  border: 1px dashed teal;
   /* transition: gap 0.5s ease-in-out; */
   animation: expand-gap 2.5s ease-in-out forwards;
 }
@@ -85,14 +172,22 @@ body {
   display: none;
 }
 
-.display-box:hover {
+
+.display-box {
+  transition: transform .5s;
+  animation: pulse 1s infinite;
+
+}
+
+.static-box:hover {
   transform: scale(1.2);
   animation: pulse 1s infinite;
 }
 
+
 .falling-box-left1 {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   /* background-color: lightgreen; */
   /* position: absolute;  */
   /* border-radius: 50%; */
@@ -107,15 +202,15 @@ body {
   /* padding-bottom: 20px; */
 }
 
+.static-box-left1 {
+  background-color: red;
+}
+
 .falling-box-left2 {
   width: 70px;
   height: 70px;
-  /* background-color: lightgreen; */
-  /* position: absolute;  */
-  /* border-radius: 50%; */
+
   opacity: 0;
-  /* top: -100px; */
-  /* Start off-screen */
   animation: fall-left2 2s ease-in-out forwards;
   display: flex;
   justify-content: center;
@@ -126,8 +221,8 @@ body {
 
 
 .falling-box-right2 {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   /* background-color: lightgreen; */
   /* position: absolute;  */
   /* border-radius: 50%; */
@@ -142,8 +237,8 @@ body {
 }
 
 .falling-box-right1 {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   /* background-color: lightgreen; */
   /* position: absolute;  */
   /* border-radius: 50%; */

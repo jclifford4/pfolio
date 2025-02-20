@@ -2,15 +2,13 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Joseph Clifford";
+
 }
 
-<div class="main text-center">
-    @* <div class="main-container"> *@
-        @* <div class="mugshot"></div> *@
-        <div class="main-container display-1 position-relative border border-success">
+<div class="main">
+        <div class="main-container ">
             <div class="boxes">
-
-                <div class="portfolio falling-box-left1 box1">
+                <div id="animated-box" class="portfolio falling-box-left1 box1">
                     <img class="box-img" src="/images/folder.svg" alt="github logo"/>
                 </div>
                 <div class="github falling-box-left2 box2">
@@ -22,17 +20,9 @@
                 <div class="resume falling-box-right1 box4">
                     <img class="box-img" src="/images/resume.svg" alt="github logo"/>
                 </div>
-                @* <div class="github falling-box-left box2 border border-secondary"></div>
-                <div class="resume falling-box-right box3 border border-secondary"></div>
-                <div class="interests falling-box-right box4 border border-secondary"></div> *@
-
-                @* <div class="portfolio display-box border border-secondary"></div>
-                <div class="github display-box border border-secondary"></div>
-                <div class="resume display-box border border-secondary"></div>
-                <div class="interests display-box border border-secondary"></div> *@
             </div>
+            
             <div class="display-1">Joseph Clifford</div> 
             <div class="display-6">Software Engineer</div>
         </div>
-    @* </div> *@
 </div>
