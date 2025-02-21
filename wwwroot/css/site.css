@@ -48,9 +48,9 @@ body {
 .main {
   position: absolute;
   left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  height: calc(100% - 10px);
+  top: 0;
+  translate: -50%;
+  height: fit-content;
   width: calc(100% - 15px);
   /* background-color: lightpink; */
   /* border: 3px solid yellow; */
@@ -59,7 +59,7 @@ body {
   justify-content: start;
   align-items: center;
   border-radius: 10px;
-  gap: 25px;
+  gap: 3rem;
   margin: 0;
   padding: 1rem 0 0 0;
   z-index: 0;
@@ -772,4 +772,124 @@ body {
   to {
     transform: translateX(0);
   }
+}
+
+.main-about {
+  width: 100%;
+  max-width: 320px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.title-about {
+  position: absolute;
+  color: whitesmoke;
+  font-size: xx-large;
+  left: 0;
+  top: -10%;
+
+}
+
+
+.summary {
+  width: 100%;
+  height: 100%;
+  border: 1px green solid;
+  padding: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.summary p {
+  color: whitesmoke;
+  font-size: large;
+}
+
+.main-projects {
+  width: 100%;
+  max-width: 320px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  position: relative;
+  margin-top: 2rem;
+  padding: 2px;
+}
+
+.project-items {
+  width: 100%;
+  max-width: 320px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: .1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid red;
+  position: relative;
+  gap: .5rem;
+}
+
+.title-projects {
+  position: absolute;
+  color: whitesmoke;
+  font-size: xx-large;
+  left: 0;
+  top: -20%;
+
+}
+
+.pr-item {
+  width: 125px;
+  height: 125px;
+  background-color: #2496ED;
+  border-radius: 2px;
+
+}
+
+.contact-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 2.5rem 1rem 1rem 3rem;
+  height: 80px;
+  gap: .5rem;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 5px;
+  background-color: #3C91E6;
+}
+
+.title-contact {
+  position: absolute;
+  font-weight: 500;
+  font-size: large;
+  top: 15%;
+  left: 12%;
+  color: whitesmoke;
+  translate: -50% -50%;
+}
+
+.contact-group {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  color: black;
+}
+
+.contact-group img {
+  width: 20px;
+  height: 20px;
 }
