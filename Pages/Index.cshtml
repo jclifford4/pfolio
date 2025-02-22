@@ -42,12 +42,8 @@
     </div>
     <div class="tech">
         <div class="languages">
-            <div class="title-lang">Languages</div>
+            <div class="title">Languages</div>
             <div class="tbox csharp">
-                @* <div class="tbox-1">
-                    <img src="/images/c.svg" alt="c image"/>
-                    <img src="/images/sharp.svg" alt="sharp image"/>
-                </div> *@
                 <div class="text">C#</div>
             </div>
             <div class="tbox javascript">
@@ -64,7 +60,7 @@
             </div>
         </div>
         <div class="frameworks">
-            <div class="title-frame">Frameworks</div>
+            <div class="title">Frameworks</div>
             <div class="tbox efcore">
                 <img src="/images/efcore.png" alt="efcore image"/>
                 <div class="text">EF Core</div>
@@ -75,12 +71,11 @@
             </div>
         </div>
         <div class="tools">
-            <div class="title-tools">Tools</div>
+            <div class="title">Tools</div>
             <div class="tbox net">
                 @* <img src="/images/net.svg" alt="net image"/> *@
                 <div class="text">.NET</div>
             </div>
-            
             <div class="tbox mysql">
                 <img src="/images/mysql.svg" alt="net image"/>
                 <div class="text">MySQL</div>
@@ -91,7 +86,7 @@
             </div>
         </div>
         <div class="os">
-            <div class="title-os">OS</div>
+            <div class="title">OS</div>
             <div class="tbox linux">
                 <img src="/images/linux.svg" alt="linux image"/>
                 <div class="text">Linux</div>
@@ -103,12 +98,12 @@
         </div>
     </div>
     <div class="main-about">
-        <div id="about" class="title-about">
+        <div id="about" class="title-about slide">
             About Me
         </div>
         <div class="summary">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+            <p class="slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+            <p class="slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
         </div>
     </div>
     <div class="main-projects">
@@ -122,7 +117,6 @@
             <div class="pr-item"></div>
         </div>
     </div>
-    
     <div class="contact-box">
         <div id="contact" class="title-contact">
             Contact
@@ -137,3 +131,28 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const tboxes = document.querySelectorAll(".tbox");
+    const titles = document.querySelectorAll(".title");
+    const slides = document.querySelectorAll(".slide");
+
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target); // Stop observing after first trigger
+                }
+            });
+        },
+        { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    tboxes.forEach((tbox) => observer.observe(tbox));
+    titles.forEach((title) => observer.observe(title));
+    slides.forEach((slide) => observer.observe(slide));
+});
+</script>

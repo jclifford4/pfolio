@@ -595,17 +595,24 @@ body {
   opacity: 0.2;
 }
 
-.title-lang,
-.title-frame,
-.title-os,
-.title-tools {
+.title {
   color: white;
   font-size: large;
   font-weight: 500;
   position: absolute;
   top: -80%;
   left: 0%;
+  opacity: 0;
+  /* animation: slideInSimple 1s ease-in-out forwards; */
+  /* border-bottom: 1px solid white; */
+}
+
+.title.show,
+.title.show,
+.title.show,
+.title.show {
   animation: slideInSimple 1s ease-in-out forwards;
+  opacity: 1;
   /* border-bottom: 1px solid white; */
 }
 
@@ -617,8 +624,6 @@ body {
   margin-bottom: 5px;
   margin-top: 5px;
   border-radius: 5px;
-  transform: translateX(-100vw);
-  animation: slideIn 2s ease-in-out forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -628,8 +633,16 @@ body {
   /* font-size: large; */
   font-weight: 500;
   color: black;
-  transition: transform 0.3s ease-in-out;
   /* border: 1px red solid; */
+  opacity: 0;
+  /* transition: transform 0.3s ease-in-out; */
+}
+
+.tbox.show {
+  opacity: 1;
+  /* transform: translateX(0); */
+  transform: translateX(-100vw);
+  animation: slideIn 1s ease-in-out forwards;
 }
 
 .tbox:hover {
@@ -741,6 +754,7 @@ body {
 @keyframes slideIn {
   0% {
     transform: translateX(-100vw);
+    opacity: 0;
   }
 
   80% {
@@ -761,16 +775,19 @@ body {
 
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideInSimple {
   from {
     transform: translateX(-100vw);
+    opacity: 0;
   }
 
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -792,8 +809,14 @@ body {
   font-size: xx-large;
   left: 0;
   top: -10%;
+  opacity: 0;
 
 }
+
+/* .title-about.show {
+  opacity: 1;
+  animation: slideIn 1s ease-in-out forwards;
+} */
 
 
 .summary {
@@ -892,4 +915,14 @@ body {
 .contact-group img {
   width: 20px;
   height: 20px;
+}
+
+.slide {
+  /* animation: slideInSimple 1s ease-in-out forwards; */
+  opacity: 0;
+}
+
+.slide.show {
+  animation: slideInSimple 1s ease-in-out forwards;
+  opacity: 1;
 }
