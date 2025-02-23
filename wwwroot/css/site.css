@@ -26,7 +26,6 @@ body {
   position: relative;
 }
 
-
 .main-text {
   display: flex;
   flex-direction: column;
@@ -37,6 +36,38 @@ body {
 
 .name {
   font-size: xx-large;
+}
+
+.big-text-name {
+  font-size: xx-large;
+  background: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientMove 5s linear infinite;
+}
+
+.big-text {
+  font-size: larger;
+}
+
+.link {
+  color: whitesmoke;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+
+.fancy-text {
+  background: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+  -webkit-background-clip: text;
+  background-size: 200% auto;
+  color: transparent;
+  animation: fadeInOutHalf 3s linear infinite, gradientMove 5s linear infinite;
+}
+
+.link:hover {
+  color: #04ff92;
 }
 
 .work-title {
@@ -539,7 +570,7 @@ body {
   color: whitesmoke;
   font-size: xx-large;
   left: 0;
-  top: -10%;
+  top: -60px;
   opacity: 0;
 
 }
@@ -1064,5 +1095,33 @@ body {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes fadeInOutHalf {
+  0% {
+    opacity: .6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .6;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100%, 50%;
+  }
+
+  100% {
+    background-position: 0%, 50%;
   }
 }
