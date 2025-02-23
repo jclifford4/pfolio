@@ -111,10 +111,56 @@
             Projects
         </div>
         <div class="project-items">
-            <div class="pr-item"></div>
-            <div class="pr-item"></div>
-            <div class="pr-item"></div>
-            <div class="pr-item"></div>
+            <div class="pr-item">
+                <div class="pr-title no-select">Visual DS</div>
+                <a href="https://visual-ds-virid.vercel.app">
+                    <img src="images/vis-ds.png" alt="project image"/>
+                </a>
+            </div>
+            <div class="pr-item">
+                <div class="pr-title no-select">SPM</div>
+                <a href="https://github.com/jclifford4/SecurePasswordManager"><img src="images/spm.png" alt="project image"/></a>
+            </div>
+            <div class="pr-item">
+                <div class="pr-title no-select">Admin Dashboard</div>
+                <a href="https://jclifford4.github.io/admin-dashboard"><img src="images/dashboard.png" alt="admin dashboard image"/></a>
+            </div>
+            <div class="pr-item">
+                <div class="pr-title no-select">Sketch Pad</div>
+                <a href="https://jclifford4.github.io/sketch-pad"><img src="images/sketch-pad.png" alt="sketch pad image"/></a>
+            </div>
+            <div class="pr-item">
+                <div class="pr-title no-select">Calculator</div>
+                <a href="https://jclifford4.github.io/calculator"><img src="images/calc.png" alt="calculator image"/></a>
+            </div>
+            <div class="pr-item">
+                <div class="pr-title no-select">Rock Paper Scissors</div>
+                <a href="https://jclifford4.github.io/rock-paper-scissors"><img src="images/rps.png" alt="rock paper scissors image"/></a>
+            </div>
+            <div class="pr-item">
+                <div class="pr-title no-select">Library</div>
+                <a href="https://jclifford4.github.io/library/"><img src="images/library.png" alt="library image"/></a>
+            </div>
+        </div>
+    </div>
+    <div class="main-projects">
+        <div id="projects" class="title-projects">
+            Other
+        </div>
+        <div class="project-items">
+            <div class="pr-item-sq">
+                @* <div class="pr-title no-select">GitHub</div> *@
+                <a href="https://jclifford4.github.com"><img src="images/github.png" alt="github image"/></a>
+            </div>
+            <div class="pr-item-sq">
+                @* <div class="pr-title no-select">LinkedIn</div> *@
+                <a href="https://www.linkedin.com/in/jclifford4"><img src="images/linkedin.png" alt="linkedin image"/></a>
+            </div>
+            <div class="pr-item-sq">
+                @* <div class="pr-title no-select">Code Pen</div> *@
+                <a href="https://codepen.io/josephclifford12"><img src="images/codepen.png" alt="codepen image"/></a>
+            </div>
+            
         </div>
     </div>
     <div class="contact-box">
@@ -137,6 +183,8 @@
     const tboxes = document.querySelectorAll(".tbox");
     const titles = document.querySelectorAll(".title");
     const slides = document.querySelectorAll(".slide");
+    const projects = document.querySelectorAll(".pr-item");
+    const projectSqs = document.querySelectorAll(".pr-item-sq");
 
 
     const observer = new IntersectionObserver(
@@ -148,11 +196,13 @@
                 }
             });
         },
-        { threshold: 0.1 } // Trigger when 10% of the element is visible
+        { threshold: .1 } // Trigger when 10% of the element is visible
     );
 
     tboxes.forEach((tbox) => observer.observe(tbox));
     titles.forEach((title) => observer.observe(title));
     slides.forEach((slide) => observer.observe(slide));
+    projects.forEach((project) => observer.observe(project));
+    projectSqs.forEach((projectSq) => observer.observe(projectSq));
 });
 </script>
