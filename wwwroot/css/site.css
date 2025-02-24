@@ -1190,6 +1190,10 @@ body {
     display: block;
   }
 
+  .title-contact-big {
+    top: -20px;
+  }
+
   .main {
     gap: 8rem;
     padding-top: 50px;
@@ -1281,11 +1285,15 @@ body {
   .title-about,
   .title-projects,
   .title-main,
-  .title-tech,
-  .title-contact-big {
+  .title-tech {
     font-size: 30px;
     left: -160px;
     top: -60px;
+  }
+
+  .title-contact-big {
+    top: -50px;
+    left: -160px;
   }
 
   .section-line {
@@ -1394,6 +1402,35 @@ body {
     border-radius: 50%;
     top: -25px;
     background-color: whitesmoke;
+  }
+}
+
+
+@media (min-width: 2560px) {
+
+  .title-about,
+  .title-projects,
+  .title-main,
+  .title-tech,
+  .title-contact-big {
+    /* font-size: 30px; */
+    left: -360px;
+    /* top: -60px; */
+  }
+
+  .title-contact-big,
+  .title-tech,
+  .title-main {
+    display: block;
+  }
+
+  .section-line {
+    left: -400px;
+
+  }
+
+  .section-dot {
+    left: -403px;
   }
 }
 
