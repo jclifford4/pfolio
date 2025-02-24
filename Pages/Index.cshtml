@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="main-container">
-    <div class="section-line"></div>
+    <div id="section" class="section-line"></div>
     <div class="section-dot"></div>
     <div id="name" class="title-main slide">
             ID
@@ -203,12 +203,26 @@
 </div>
 
 <script>
+
+    @* window.addEventListener("scroll", function () {
+      let scrollPosition = window.scrollY; // Get current scroll position
+      let section = document.getElementsByClassName("section-line");
+
+      if (scrollPosition > 10) { // Change '300' to any scroll position you want
+        section.classList.add("highlight");
+      } else {
+        section.classList.remove("highlight");
+      }
+    }); *@
+
     document.addEventListener("DOMContentLoaded", function () {
     const tboxes = document.querySelectorAll(".tbox");
     const titles = document.querySelectorAll(".title");
     const slides = document.querySelectorAll(".slide");
     const projects = document.querySelectorAll(".pr-item");
     const projectSqs = document.querySelectorAll(".pr-item-sq");
+    const lines = document.querySelectorAll(".section-line");
+    const dots = document.querySelectorAll(".section-dot");
 
 
     const observer = new IntersectionObserver(
@@ -228,5 +242,7 @@
     slides.forEach((slide) => observer.observe(slide));
     projects.forEach((project) => observer.observe(project));
     projectSqs.forEach((projectSq) => observer.observe(projectSq));
+    lines.forEach((line) => observer.observe(line));
+    dots.forEach((dot) => observer.observe(dot));
 });
 </script>
