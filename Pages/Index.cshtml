@@ -13,10 +13,10 @@
         </div>
     </div>
     <div class="main-container">
-    <div id="section" class="section-line"></div>
-    <div class="section-dot"></div>
+    <div id="section" class="section-line slide"></div>
+    <div class="section-dot slide"></div>
     <div id="name" class="title-main slide">
-            ID
+            <a class="no-style" href="#name">Me</a>
     </div>
 
         @* <div class="boxes">
@@ -48,10 +48,10 @@
         </div>
     </div>
     <div class="tech">
-        <div class="section-line"></div>
-        <div class="section-dot"></div>
+        <div class="section-line slide"></div>
+        <div class="section-dot slide"></div>
         <div id="tech" class="title-tech slide">
-            Stack
+            <a class="no-style" href="#tech">Skills</a>
         </div>
         <div class="languages">
             <div class="title">Languages</div>
@@ -113,7 +113,7 @@
         <div class="section-line"></div>
         <div class="section-dot"></div>
         <div id="about" class="title-about slide">
-            Who Am I?
+            <a class="no-style" href="#about">Who Am I?</a>
         </div>
         <div class="summary">
             <p class="slide"><strong class="big-text">Hi, I'm </strong><strong class="big-text-name">Joseph</strong>, an aspiring software developer with a B.S. in Computer Science from SDSU. I have experience in <span class="fancy-text">full-stack development</span>, <span class="fancy-text">C#</span>, <span class="fancy-text">.NET</span>, and <span class="fancy-text">JavaScript</span>, along with a commitment to writing clean, maintainable code that contributes to the scalability and performance of applications.</p>
@@ -125,7 +125,8 @@
         <div class="section-line"></div>
         <div class="section-dot"></div>
         <div id="projects" class="title-projects slide">
-            What I've Made
+            <a class="no-style" href="#projects">What I've Made</a>
+
         </div>
         <div class="project-items">
             <div class="pr-item">
@@ -163,13 +164,14 @@
     <div class="main-projects">
         <div class="section-line"></div>
         <div class="section-dot"></div>
-        <div id="projects" class="title-projects slide">
-            Where to See More
+        <div id="links" class="title-projects slide">
+            <a class="no-style" href="#links">Where To See More</a>
+
         </div>
         <div class="project-items">
             <div class="pr-item-sq">
                 @* <div class="pr-title no-select">GitHub</div> *@
-                <a href="https://jclifford4.github.com"><img src="images/github.png" alt="github image"/></a>
+                <a href="https://github.com/jclifford4"><img src="images/github.png" alt="github image"/></a>
             </div>
             <div class="pr-item-sq">
                 @* <div class="pr-title no-select">LinkedIn</div> *@
@@ -186,7 +188,7 @@
         <div class="section-line"></div>
         <div class="section-dot"></div>
         <div id="contactBig" class="title-contact-big slide">
-            Contact
+            <a class="no-style" href="#contactBig">Contact</a>
         </div>
         <div id="contact" class="title-contact">
             Contact
@@ -200,21 +202,10 @@
             <div class="phone">(619) 244 - 6977</div>
         </div>
     </div>
+    <div class="privacy">Made By Joseph Clifford 👍 © 2025 </div>
 </div>
 
 <script>
-
-    @* window.addEventListener("scroll", function () {
-      let scrollPosition = window.scrollY; // Get current scroll position
-      let section = document.getElementsByClassName("section-line");
-
-      if (scrollPosition > 10) { // Change '300' to any scroll position you want
-        section.classList.add("highlight");
-      } else {
-        section.classList.remove("highlight");
-      }
-    }); *@
-
     document.addEventListener("DOMContentLoaded", function () {
     const tboxes = document.querySelectorAll(".tbox");
     const titles = document.querySelectorAll(".title");
@@ -234,7 +225,7 @@
                 }
             });
         },
-        { threshold: .5 } // Trigger when 10% of the element is visible
+        { threshold: .25 } // Trigger when 10% of the element is visible
     );
 
     tboxes.forEach((tbox) => observer.observe(tbox));
