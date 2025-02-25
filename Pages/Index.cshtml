@@ -11,6 +11,14 @@
         <div class="mugshot">
             <img src="/images/me1.jpg"/>
         </div>
+        <button id="theme" class="theme-button" onclick="toggleTheme()">☀️</button>
+        <button onclick="location.href='#name'" class="link-button one">👋🏼</button>
+        <button onclick="location.href='#tech'" class="link-button two">💻</button>
+        <button onclick="location.href='#about'" class="link-button three">📜</button>
+        <button onclick="location.href='#projects'" class="link-button four">🧮</button>
+        <button onclick="location.href='#links'"class="link-button five">🔗</button>
+        <button onclick="location.href='#contact'" class="link-button six">📞</button>
+
     </div>
     <div class="main-container">
     <div id="section" class="section-line slide"></div>
@@ -18,29 +26,6 @@
     <div id="name" class="title-main slide">
             <a class="no-style" href="#name">Me</a>
     </div>
-
-        @* <div class="boxes">
-            <a href="#projects">
-                <div id="animated-box" class="portfolio falling-box-left1 box1">
-                    <img class="box-img" src="/images/folder.svg" alt="github logo"/>
-                </div>
-            </a>
-            <a href="">
-                <div class="github falling-box-left2 box2">
-                    <img class="box-img" src="/images/github.svg" alt="github logo"/>
-                </div>
-            </a>
-            <a href="#about">
-                <div class="about falling-box-right2 box3">
-                    <img class="box-img" src="/images/about.svg" alt="github logo"/>
-                </div>
-            </a>
-            <a href="">
-                <div class="resume falling-box-right1 box4">
-                    <img class="box-img" src="/images/resume.svg" alt="github logo"/>
-                </div>
-            </a>
-        </div> *@
         <div class="main-text">
             <div class="name">Joseph Clifford</div> 
             <div class="work-title">Software Engineer</div>
@@ -206,6 +191,25 @@
 </div>
 
 <script>
+
+    const button = document.getElementById('theme');
+    const body = document.body;
+    const toggleTheme = () => {
+        const isLightMode = body.classList.toggle("light-mode");
+
+        button.textContent = isLightMode ? "🌙" : "☀️";
+
+        localStorage.setItem("theme", body.contains("light-mode") ? "light" : "dark");
+    };
+
+    // Apply saved theme on page load
+    document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") === "light") {
+            document.body.classList.add("light-mode");
+            button.textContent = "☀️";
+        }
+    });
+
     document.addEventListener("DOMContentLoaded", function () {
     const tboxes = document.querySelectorAll(".tbox");
     const titles = document.querySelectorAll(".title");

@@ -1,7 +1,5 @@
 html {
-
   font-size: 14px;
-
 }
 
 
@@ -14,17 +12,86 @@ html {
 }
 
 :root {
+  --bg-color: #1f1f1f;
+  --primary-color: #1f1f1f;
+  --secondary-color: #222222;
+  --text-color: whitesmoke;
+  --linear-gradient: linear-gradient(90deg, #7104ff, #04ff92, #7104ff);
+  --conic-color1: #3C91E6;
+  --conic-color2: #5C946E;
   --line-color: #747474;
   --secondary-text: #2496ed60;
 }
 
-html,
+.light-mode {
+  --bg-color: whitesmoke;
+  --text-color: #222222;
+  --primary-color: grey;
+  --secondary-color: #e0e0e0;
+  --linear-gradient: linear-gradient(90deg, #0408ff, #04ff92, #04090e);
+  --conic-color1: #173753;
+  --conic-color2: #93748A;
+  --secondary-text: #000000c5;
+}
+
+.theme-button {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  left: 100%;
+  top: 0;
+  translate: -50% -50%;
+}
+
+.link-button {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  translate: -50% -50%;
+}
+
+.link-button.one {
+  left: 110%;
+  top: 16.66%;
+}
+
+.link-button.two {
+  left: 120%;
+  top: 33.33%;
+}
+
+.link-button.three {
+  left: 125%;
+  top: 50%;
+}
+
+.link-button.four {
+  left: 120%;
+  top: 66.66%;
+}
+
+.link-button.five {
+  left: 115%;
+  top: 83.33%;
+}
+
+.link-button.six {
+  left: 100%;
+  top: 100%;
+}
+
 body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  background: #1f1f1f;
+  background: var(--bg-color);
   position: relative;
   font-family: 'Roboto Flex', sans-serif;
 }
@@ -40,7 +107,7 @@ body {
 .big-text-name,
 .name {
   font-size: xx-large;
-  background: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+  background: var(--linear-gradient);
   background-size: 200% auto;
   -webkit-background-clip: text;
   color: transparent;
@@ -55,6 +122,7 @@ body {
 
 .work-title {
   font-size: x-large;
+  color: var(--text-color);
 }
 
 .work-title,
@@ -68,14 +136,15 @@ body {
 }
 
 .link {
-  color: whitesmoke;
+  color: var(--text-color);
+  ;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.5s ease-in-out;
 }
 
 .fancy-text {
-  background: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+  background: var(--linear-gradient);
   -webkit-background-clip: text;
   background-size: 200% auto;
   color: transparent;
@@ -84,6 +153,23 @@ body {
 
 .link:hover {
   color: #04ff92;
+}
+
+body,
+.theme-button,
+.main,
+.main-container,
+.tech,
+.summary,
+.main-projects,
+.project-items,
+.languages,
+.frameworks,
+.tools,
+.os,
+.contact-box {
+  transition: background-color .5s, color 0.5s;
+
 }
 
 
@@ -103,6 +189,8 @@ body {
   margin: 0;
   padding: 1rem 0 0 0;
   z-index: 0;
+  background: var(--bg-color);
+
 }
 
 .main-container {
@@ -114,8 +202,8 @@ body {
   align-items: center;
   justify-content: space-evenly;
   border-radius: 10px;
-  background: #222222;
-  color: whitesmoke;
+  background: var(--bg-color);
+  color: var(--text-color);
   position: relative;
   margin: 0;
   padding: 10px;
@@ -136,7 +224,7 @@ body {
   position: absolute;
   height: calc(100% + 2px);
   width: calc(100% + 2px);
-  background-image: conic-gradient(from var(--angle), transparent, #3C91E6, transparent, #5C946E);
+  background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -172,7 +260,8 @@ body {
   position: absolute;
   height: calc(100% + 2px);
   width: calc(100% + 2px);
-  background-image: conic-gradient(from var(--angle), transparent, #3C91E6, transparent, #5C946E);
+  background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
+
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -325,7 +414,7 @@ body {
   height: 290px;
   border-radius: 10px;
   padding-top: 1rem;
-  background-color: #222222;
+  background-color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -335,7 +424,7 @@ body {
   position: absolute;
   height: calc(100% + 2px);
   width: calc(100% + 2px);
-  background-image: conic-gradient(from var(--angle), transparent, #3C91E6, transparent, #5C946E);
+  background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -368,11 +457,11 @@ body {
   gap: .5rem;
   justify-content: start;
   align-content: center;
-  border-bottom: 1px solid #1f1f1f;
+  border-bottom: 1px solid var(--bg-color);
   margin-bottom: 1rem;
   width: 100%;
   max-width: 500px;
-  background-color: #1f1f1f;
+  background-color: var(--bg-color);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -389,7 +478,7 @@ body {
   position: absolute;
   height: 90%;
   width: 60%;
-  background-image: conic-gradient(from var(--angle), #000000, #04ff92, #3C91E6);
+  background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
   top: 50%;
   left: 30%;
   translate: -50% -50%;
@@ -409,7 +498,7 @@ body {
 }
 
 .title {
-  color: white;
+  color: var(--text-color);
   font-size: large;
   font-weight: 500;
   position: absolute;
@@ -491,7 +580,7 @@ body {
 }
 
 .xunit {
-  background-color: white;
+  background-color: grey;
 }
 
 .efcore {
@@ -565,7 +654,7 @@ body {
   align-items: center;
   position: relative;
   margin-top: 2rem;
-  background-color: #222222;
+  background-color: var(--bg-color);
   border-radius: 10px;
   position: relative;
   cursor: pointer;
@@ -577,15 +666,13 @@ body {
   position: absolute;
   height: calc(100% + 2px);
   width: calc(100% + 2px);
-  background-image: conic-gradient(from var(--angle), transparent, #3C91E6, transparent, #5C946E);
+  background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
   top: 50%;
   left: 50%;
   translate: -50% -50%;
   z-index: -1;
   border-radius: 10px;
   animation: fadeIn .5s ease-in-out forwards, spin 6s linear infinite;
-
-
 }
 
 .main-about:hover::after,
@@ -605,7 +692,7 @@ body {
 .title-tech,
 .title-contact-big {
   position: absolute;
-  color: whitesmoke;
+  color: var(--text-color);
   font-size: xx-large;
   left: 0;
   top: -60px;
@@ -626,7 +713,7 @@ body {
 }
 
 .summary p {
-  color: whitesmoke;
+  color: var(--text-color);
   font-size: large;
 }
 
@@ -640,7 +727,7 @@ body {
   position: relative;
   margin-top: 2rem;
   border-radius: 10px;
-  background-color: #222222;
+  background-color: var(--bg-color);
   cursor: pointer;
 
 }
@@ -651,7 +738,7 @@ body {
   position: absolute;
   height: calc(100% + 2px);
   width: calc(100% + 2px);
-  background-image: conic-gradient(from var(--angle), transparent, #3C91E6, transparent, #5C946E);
+  background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -690,7 +777,7 @@ body {
 
 .title-projects {
   position: absolute;
-  color: whitesmoke;
+  color: var(--text-color);
   font-size: xx-large;
   left: 0;
   top: -50px;
@@ -838,6 +925,7 @@ body {
   translate: -50% -50%;
   font-size: x-large;
   color: whitesmoke;
+
   z-index: 1;
   text-shadow: -1px -1px 0px black,
     1px -1px 0px black,
@@ -868,7 +956,7 @@ body {
   width: 100%;
   max-width: 320px;
   border-radius: 5px;
-  background-color: #222222;
+  background-color: var(--secondary-color);
 }
 
 .title-contact {
@@ -877,7 +965,7 @@ body {
   font-size: large;
   top: 15%;
   left: 50px;
-  color: whitesmoke;
+  color: var(--text-color);
   translate: -50% -50%;
 }
 
@@ -886,7 +974,7 @@ body {
   justify-content: start;
   align-items: center;
   gap: 1rem;
-  color: whitesmoke;
+  color: var(--text-color);
 }
 
 .contact-group img {
@@ -907,6 +995,12 @@ body {
   left: 50%;
   top: 100%;
   color: var(--secondary-text);
+}
+
+.title-contact-big,
+.title-tech,
+.title-main {
+  display: none;
 }
 
 
@@ -1215,14 +1309,6 @@ body {
   }
 }
 
-.title-contact-big,
-.title-tech,
-.title-main {
-  display: none;
-}
-
-
-
 @media (min-width: 768px) {
 
   html {
@@ -1239,24 +1325,13 @@ body {
     color: var(--secondary-text);
   }
 
-  /* .pr-item,
-  .pr-item.show {
-    width: 300px;
-    height: 300px;
-    animation: dropFromTop 2s ease-in-out forwards;
-  } */
-
-
-
   .title-contact-big,
   .title-tech,
   .title-main,
   .title-about,
   .title-projects {
     display: block;
-    /* animation: slideInSimple 1.8s ease-in-out forwards; */
     opacity: 0;
-
   }
 
   .title-contact-big.show,
@@ -1349,19 +1424,9 @@ body {
     object-position: -150px 0px;
   }
 
-
-
   .pr-title {
     font-size: xx-large;
   }
-
-  /* .pr-item-sq.show {
-    width: 250px;
-    height: 250px;
-    animation: slideInSimpleRight 2s ease-in-out forwards;
-
-  } */
-
 
   .title-about,
   .title-projects,
@@ -1408,7 +1473,6 @@ body {
     top: -20px;
     background-color: var(--line-color);
     opacity: 0;
-
   }
 
 
@@ -1419,7 +1483,6 @@ body {
     height: 150%;
     top: -20px;
     background-color: var(--line-color);
-
   }
 
   .tech .section-dot {
@@ -1439,7 +1502,6 @@ body {
     height: 138%;
     top: -10px;
     background-color: var(--line-color);
-
   }
 
   .main-about .section-dot {
@@ -1459,7 +1521,6 @@ body {
     height: calc(100% + 115px);
     top: -15px;
     background-color: var(--line-color);
-
   }
 
   .main-projects .section-line {
@@ -1469,7 +1530,6 @@ body {
     height: calc(100% + 100px);
     top: -10px;
     background-color: var(--line-color);
-
   }
 
   .main-projects .section-dot {
@@ -1489,7 +1549,6 @@ body {
     height: 100%;
     top: 0px;
     background-color: var(--line-color);
-
   }
 
   .contact-box .section-dot {
@@ -1504,7 +1563,7 @@ body {
 
   .section-line.show {
     background-size: 200% auto;
-    background-image: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+    background-image: var(--linear-gradient);
     color: transparent;
     animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
@@ -1514,7 +1573,8 @@ body {
 
   .section-dot.show {
     background-size: 200% auto;
-    background-image: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+    background-image: var(--linear-gradient);
+
     color: transparent;
     animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
@@ -1523,18 +1583,17 @@ body {
 
   .section-line.show {
     background-size: 200% auto;
-    background-image: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+    background-image: var(--linear-gradient);
     color: transparent;
     animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
     width: 4px;
     animation: slideInSimple 2s ease-in-out forwards;
-
   }
 
   .section-dot.show {
     background-size: 200% auto;
-    background-image: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+    background-image: var(--linear-gradient);
     color: transparent;
     animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
@@ -1606,7 +1665,6 @@ body {
   .title-contact-big.show {
     left: -360px;
     animation: slideInSimple 1.8s ease-in-out forwards;
-
   }
 
   .title-contact-big,
@@ -1617,7 +1675,6 @@ body {
 
   .section-line {
     left: -400px;
-
   }
 
   .section-dot {
@@ -1626,18 +1683,17 @@ body {
 
   .section-line.show {
     background-size: 200% auto;
-    background-image: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+    background-image: var(--linear-gradient);
     color: transparent;
     animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
     width: 4px;
     animation: slideInSimple 2s ease-in-out forwards;
-
   }
 
   .section-dot.show {
     background-size: 200% auto;
-    background-image: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+    background-image: var(--linear-gradient);
     color: transparent;
     animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
@@ -1726,18 +1782,17 @@ body {
 
   .section-line.show {
     background-size: 200% auto;
-    background-image: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+    background-image: var(--linear-gradient);
     color: transparent;
     animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
     width: 4px;
     animation: slideInSimple 2s ease-in-out forwards;
-
   }
 
   .section-dot.show {
     background-size: 200% auto;
-    background-image: linear-gradient(90deg, #7904ff, #04ff92, #7904ff);
+    background-image: var(--linear-gradient);
     color: transparent;
     animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
@@ -1769,7 +1824,6 @@ body {
   .section-line {
     left: -20px;
     display: none;
-
   }
 
   .section-dot {
