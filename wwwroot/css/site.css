@@ -200,7 +200,7 @@ body,
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   border-radius: 10px;
   background: var(--bg-color);
   color: var(--text-color);
@@ -1343,6 +1343,10 @@ body,
     animation: slideInSimple 1.8s ease-in-out forwards;
   }
 
+  .main-container {
+    text-align: center;
+  }
+
   .title-contact-big {
     top: -20px;
   }
@@ -1618,6 +1622,12 @@ body,
 
   }
 
+  .main-container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
   .privacy {
     left: 50%;
     top: 100%;
@@ -1711,6 +1721,10 @@ body,
     left: 50%;
     top: 100%;
     color: var(--secondary-text);
+  }
+
+  .main-container {
+    text-align: center;
   }
 
   .title-about,
@@ -1811,6 +1825,10 @@ body,
   .title-tech,
   .title-contact-big {
     left: 0px;
+  }
+
+  .main-container {
+    text-align: center;
   }
 
   .title-tech {
