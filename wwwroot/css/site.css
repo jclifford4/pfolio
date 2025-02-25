@@ -414,8 +414,10 @@ body,
   height: 290px;
   border-radius: 10px;
   padding-top: 1rem;
+  padding-left: 1px;
   background-color: var(--secondary-color);
   cursor: pointer;
+
 }
 
 .tech::after,
@@ -453,7 +455,7 @@ body,
 .frameworks {
   position: relative;
   display: flex;
-  padding: 0 .5rem 0 .5rem;
+  padding: 0 0 0 1rem;
   gap: .5rem;
   justify-content: start;
   align-content: center;
