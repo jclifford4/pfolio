@@ -23,9 +23,6 @@
     <div id="name" class="main-container">
     <div id="section" class="section-line slide"></div>
     <div class="section-dot slide"></div>
-    @* <div id="name" class="title-main slide">
-            <a class="no-style" href="#name">Me</a>
-    </div> *@
         <div class="main-text">
             <div class="name">Joseph Clifford</div> 
             <div class="work-title">Software Engineer</div>
@@ -199,7 +196,7 @@
 
         button.textContent = isLightMode ? "🌙" : "☀️";
 
-        localStorage.setItem("theme", body.contains("light-mode") ? "light" : "dark");
+        localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
     };
 
     // Apply saved theme on page load

@@ -28,9 +28,9 @@ html {
   --text-color: #222222;
   --primary-color: grey;
   --secondary-color: #e0e0e0;
-  --linear-gradient: linear-gradient(90deg, #0408ff, #04ff92, #04090e);
-  --conic-color1: #173753;
-  --conic-color2: #93748A;
+  --linear-gradient: linear-gradient(90deg, #b700ff, #00ff40, #b700ff);
+  --conic-color1: #490166;
+  --conic-color2: #006e1c;
   --secondary-text: #000000c5;
 }
 
@@ -1387,9 +1387,10 @@ body,
 
   .title {
     left: 525px;
-    top: -2px;
+    top: 50%;
     font-size: xx-large;
     font-weight: 400;
+    translate: 0% -50%;
   }
 
   .tbox {
@@ -1591,19 +1592,19 @@ body,
     background-size: 200% auto;
     background-image: var(--linear-gradient);
     color: transparent;
-    animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
     width: 4px;
-    animation: slideInSimple 2s ease-in-out forwards;
+    animation: slideInSimple 2s ease-in-out forwards, gradientMove 5s linear infinite;
+
   }
 
   .section-dot.show {
     background-size: 200% auto;
     background-image: var(--linear-gradient);
     color: transparent;
-    animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
-    animation: slideInSimple 2s ease-in-out forwards;
+    animation: slideInSimple 2s ease-in-out forwards, gradientMove 5s linear infinite;
+
   }
 
 
@@ -1690,26 +1691,25 @@ body,
   }
 
   .section-dot {
-    left: -403px;
+    left: -402px;
   }
 
   .section-line.show {
     background-size: 200% auto;
     background-image: var(--linear-gradient);
     color: transparent;
-    animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
     width: 4px;
-    animation: slideInSimple 2s ease-in-out forwards;
+    animation: slideInSimple 2s ease-in-out forwards, gradientMove 5s linear infinite;
   }
 
   .section-dot.show {
     background-size: 200% auto;
     background-image: var(--linear-gradient);
     color: transparent;
-    animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
-    animation: slideInSimple 2s ease-in-out forwards;
+    animation: slideInSimple 2s ease-in-out forwards, gradientMove 5s linear infinite;
+
   }
 
 }
@@ -1793,26 +1793,24 @@ body,
 
   .section-dot {
     opacity: 0;
-    left: -83px;
+    left: -82px;
   }
 
   .section-line.show {
     background-size: 200% auto;
     background-image: var(--linear-gradient);
     color: transparent;
-    animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
     width: 4px;
-    animation: slideInSimple 2s ease-in-out forwards;
+    animation: slideInSimple 2s ease-in-out forwards, gradientMove 5s linear infinite;
   }
 
   .section-dot.show {
     background-size: 200% auto;
     background-image: var(--linear-gradient);
     color: transparent;
-    animation: gradientMove 5s linear infinite;
     border-image-slice: 1;
-    animation: slideInSimple 2s ease-in-out forwards;
+    animation: slideInSimple 2s ease-in-out forwards, gradientMove 5s linear infinite;
   }
 
 }
