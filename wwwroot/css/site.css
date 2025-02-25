@@ -39,7 +39,7 @@ html {
   width: 60px;
   height: 40px;
   border-radius: 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
   left: 100%;
   top: 0;
@@ -51,7 +51,7 @@ html {
   width: 60px;
   height: 40px;
   border-radius: 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
   translate: -50% -50%;
 }
@@ -461,7 +461,6 @@ body,
   align-content: center;
   border-bottom: 1px solid var(--bg-color);
   margin-bottom: 1rem;
-  width: 100%;
   max-width: 500px;
   background-color: var(--bg-color);
   border-radius: 4px;
@@ -504,7 +503,7 @@ body,
   font-size: large;
   font-weight: 500;
   position: absolute;
-  top: -80%;
+  top: -25px;
   left: 5px;
   opacity: 0;
 }
