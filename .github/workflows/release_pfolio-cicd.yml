@@ -29,7 +29,7 @@ jobs:
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
@@ -43,7 +43,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: .net-app
 
@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'pfolio-cicd'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_178A939ED5E64B55BE4015B076E68548 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7DBB1379B9AD40289A16EDC26592C85D }}
           package: .
