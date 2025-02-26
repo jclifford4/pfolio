@@ -11,13 +11,13 @@
         <div class="mugshot">
             <img src="/images/me1.jpg"/>
         </div>
-        <button id="theme" class="theme-button" onclick="toggleTheme()">☀️</button>
-        <button onclick="location.href='#name'" class="link-button one">👋🏼</button>
-        <button onclick="location.href='#tech'" class="link-button two">💻</button>
-        <button onclick="location.href='#about'" class="link-button three">📜</button>
-        <button onclick="location.href='#projects'" class="link-button four">🧮</button>
+        <button id="theme" class="theme-button" onclick="toggleTheme()"></button>
+        <button onclick="location.href='#name'" class="link-button one">🪪</button>
+        <button onclick="location.href='#tech'" class="link-button two">🧰</button>
+        <button onclick="location.href='#about'" class="link-button three">📚</button>
+        <button onclick="location.href='#projects'" class="link-button four">📂</button>
         <button onclick="location.href='#links'"class="link-button five">🔗</button>
-        <button onclick="location.href='#contact'" class="link-button six">📞</button>
+        <button onclick="location.href='#contact'" class="link-button six">📧</button>
 
     </div>
     <div id="name" class="main-container">
@@ -29,15 +29,16 @@
             <div class="location-title">San Diego, CA</div>
         </div>
     </div>
-    <div class="tech">
+    <div id="tech" class="tech">
         <div class="section-line slide"></div>
         <div class="section-dot slide"></div>
-        <div id="tech" class="title-tech slide">
+        <div  class="title-tech slide">
             <a class="no-style" href="#tech">Skills</a>
         </div>
         <div class="languages">
             <div class="title">Languages</div>
             <div class="tbox csharp">
+                <img src="/images/csharp.svg" alt="csharp image"/>
                 <div class="text">C#</div>
             </div>
             <div class="tbox javascript">
@@ -49,7 +50,7 @@
                 <div class="text">CSS</div>
             </div>
             <div class="tbox html">
-                <img src="/images/html5.svg" alt="net image"/>
+                <img src="/images/html.svg" alt="net image"/>
                 <div class="text">HTML</div>
             </div>
         </div>
@@ -67,7 +68,7 @@
         <div class="tools">
             <div class="title">Tools</div>
             <div class="tbox net">
-                @* <img src="/images/net.svg" alt="net image"/> *@
+                <img src="/images/net.svg" alt="dotnet image"/>
                 <div class="text">.NET</div>
             </div>
             <div class="tbox mysql">
@@ -78,9 +79,13 @@
                 <img src="/images/docker.svg" alt="net image"/>
                 <div class="text">Docker</div>
             </div>
+            <div class="tbox azure">
+                <img src="/images/azure.svg" alt="net image"/>
+                <div class="text">Azure</div>
+            </div>
         </div>
         <div class="os">
-            <div class="title">OS</div>
+            <div class="title">Other</div>
             <div class="tbox linux">
                 <img src="/images/linux.svg" alt="linux image"/>
                 <div class="text">Linux</div>
@@ -88,6 +93,14 @@
             <div class="tbox windows">
                 <img src="/images/windows.svg" alt="windows image"/>
                 <div class="text">Windows</div>
+            </div>
+            <div class="tbox git">
+                <img src="/images/github-mark.png" alt="git image"/>
+                <div class="text">GitHub</div>
+            </div>
+            <div class="tbox unity">
+                <img src="/images/unity.svg" alt="unity image"/>
+                <div class="text">Unity</div>
             </div>
         </div>
     </div>
@@ -98,8 +111,8 @@
             <a class="no-style" href="#about">Who Am I?</a>
         </div>
         <div class="summary">
-            <p class="slide"><strong class="big-text">Hi, I'm </strong><strong class="big-text-name">Joseph</strong>, an aspiring software developer with a B.S. in Computer Science from SDSU. I have experience in <span class="fancy-text">full-stack development</span>, <span class="fancy-text">C#</span>, <span class="fancy-text">.NET</span>, and <span class="fancy-text">JavaScript</span>, along with a commitment to writing clean, maintainable code that contributes to the scalability and performance of applications.</p>
-            <p class="slide"><strong class="big-text">Projects</strong> I have created include a <a class="link" href="#projects">Secure Password Manager</a> using <span class="fancy-text">.NET 8</span> and <span class="fancy-text">MySQL</span>, a <a class="link" href="#projects">Data Structures Website</a> built with <span class="fancy-text">React</span> and <span class="fancy-text">D3.js</span>, and a video game platformer developed with a team of four. I enjoy solving complex problems and continuously expanding my knowledge in software security and web development.</p>
+            <p class="slide"><strong class="big-text">Hi, I'm </strong><strong class="big-text-name">Joseph</strong>, an aspiring software engineer with a B.S. in Computer Science from SDSU. I have experience in <span class="fancy-text">full-stack development</span>, <span class="fancy-text">C#</span>, <span class="fancy-text">.NET</span>, and <span class="fancy-text">JavaScript</span>, along with a commitment to writing clean, maintainable code that contributes to the scalability and performance of applications.</p>
+            <p class="slide"><strong class="big-text">Projects</strong> I have created include a <a class="link" href="#projects">Secure Password Manager</a> using <span class="fancy-text">.NET 8</span> and <span class="fancy-text">MySQL</span>, a <a class="link" href="#projects">Data Structures Website</a> built with <span class="fancy-text">React</span> and <span class="fancy-text">D3.js</span>, and various other projects withing <span class="fancy-text">Unity Engine</span>. I enjoy solving complex problems and continuously expanding my knowledge in software security and web development.</p>
             <p class="slide"><strong class="big-text">Beyond coding</strong>, I love learning something new every day, whether it’s learning a second language or solving logic puzzles. I also enjoy going for runs, especially training for half marathons. I’m always open to new opportunities and collaborations, so feel free to reach out!</p>
         </div>
     </div>
@@ -152,15 +165,12 @@
         </div>
         <div class="project-items">
             <div class="pr-item-sq">
-                @* <div class="pr-title no-select">GitHub</div> *@
                 <a href="https://github.com/jclifford4"><img src="images/github.png" alt="github image"/></a>
             </div>
             <div class="pr-item-sq">
-                @* <div class="pr-title no-select">LinkedIn</div> *@
                 <a href="https://www.linkedin.com/in/jclifford4"><img src="images/linkedin.png" alt="linkedin image"/></a>
             </div>
             <div class="pr-item-sq">
-                @* <div class="pr-title no-select">Code Pen</div> *@
                 <a href="https://codepen.io/josephclifford12"><img src="images/codepen.png" alt="codepen image"/></a>
             </div>
             
@@ -186,55 +196,3 @@
     </div>
     <div class="privacy">Made By Joseph Clifford 👍 © 2025 </div>
 </div>
-
-<script>
-
-    const button = document.getElementById('theme');
-    const body = document.body;
-    const toggleTheme = () => {
-        const isLightMode = body.classList.toggle("light-mode");
-
-        button.textContent = isLightMode ? "🌙" : "☀️";
-
-        localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
-    };
-
-    // Apply saved theme on page load
-    document.addEventListener("DOMContentLoaded", () => {
-        if (localStorage.getItem("theme") === "light") {
-            document.body.classList.add("light-mode");
-            button.textContent = "☀️";
-        }
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const tboxes = document.querySelectorAll(".tbox");
-    const titles = document.querySelectorAll(".title");
-    const slides = document.querySelectorAll(".slide");
-    const projects = document.querySelectorAll(".pr-item");
-    const projectSqs = document.querySelectorAll(".pr-item-sq");
-    const lines = document.querySelectorAll(".section-line");
-    const dots = document.querySelectorAll(".section-dot");
-
-
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                    observer.unobserve(entry.target); // Stop observing after first trigger
-                }
-            });
-        },
-        { threshold: .25 } // Trigger when 10% of the element is visible
-    );
-
-    tboxes.forEach((tbox) => observer.observe(tbox));
-    titles.forEach((title) => observer.observe(title));
-    slides.forEach((slide) => observer.observe(slide));
-    projects.forEach((project) => observer.observe(project));
-    projectSqs.forEach((projectSq) => observer.observe(projectSq));
-    lines.forEach((line) => observer.observe(line));
-    dots.forEach((dot) => observer.observe(dot));
-});
-</script>

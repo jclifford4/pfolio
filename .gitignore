@@ -1,7 +1,5 @@
 /bin
 /properties
-/wwwroot/js
-/wwwroot/lib
 /appsettings.*
 /obj
 /imgs/
