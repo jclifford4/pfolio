@@ -44,6 +44,7 @@ html {
   left: 100%;
   top: 0;
   translate: -50% -50%;
+  cursor: pointer;
 }
 
 .link-button {
@@ -54,6 +55,7 @@ html {
   background-color: var(--bg-color);
   color: var(--text-color);
   translate: -50% -50%;
+  cursor: pointer;
 }
 
 .link-button.one {
