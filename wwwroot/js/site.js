@@ -46,18 +46,16 @@ const toggleLights = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("lights") === "on") {
+        lightButton.textContent = "Lighting Off";
         elements.forEach(element => {
             element.classList.add("side-light");
         });
-        lightButton.textContent = "Lighting Off";
-        lightButton.classList.add("side-light");
     }
     else {
+        lightButton.textContent = "Lighting On";
         elements.forEach(element => {
             element.classList.remove("side-light");
         });
-        lightButton.textContent = "Lighting On";
-        lightButton.classList.remove("side-light");
     }
 });
 
