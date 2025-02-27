@@ -53,9 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     else {
         lightButton.textContent = "Lighting On";
-        elements.forEach(element => {
-            element.classList.remove("side-light");
-        });
     }
 });
 
