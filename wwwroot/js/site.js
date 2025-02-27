@@ -36,25 +36,21 @@ window.addEventListener("resize", toggleVisibility);
 const lightButton = document.getElementById('lights');
 let elements = document.querySelectorAll(".side-light");
 const toggleLights = () => {
-    const isSideLight = lightButton.classList.toggle("side-light");
     elements.forEach(element => {
         element.classList.toggle("side-light");
     });
-    lightButton.textContent = isSideLight ? "Lighting Off" : "Lighting On";
+    lightButton.textContent = lightButton.classList.contains("side-light") ? "Lighting Off" : "Lighting On";
     localStorage.setItem("lights", lightButton.classList.contains("side-light") ? "on" : "off");
 };
 
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("lights") === "on") {
+        lightButton.textContent = "Lighting Off";
         elements.forEach(element => {
             element.classList.add("side-light");
         });
-        lightButton.textContent = "Lighting Off";
     }
     else {
-        elements.forEach(element => {
-            element.classList.remove("side-light");
-        });
         lightButton.textContent = "Lighting On";
     }
 });
