@@ -6,9 +6,7 @@ const button = document.getElementById('theme');
 const body = document.body;
 const toggleTheme = () => {
     const isLightMode = body.classList.toggle("light-mode");
-
-    button.textContent = isLightMode ? "🌙" : "☀️";
-
+    button.textContent = isLightMode ? "Dark Theme" : "Light Theme";
     localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
 };
 
@@ -16,10 +14,48 @@ const toggleTheme = () => {
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("theme") === "light") {
         document.body.classList.add("light-mode");
-        button.textContent = "🌙";
+        button.textContent = "Dark Theme";
     }
     else {
-        button.textContent = "☀️";
+        button.textContent = "Light Theme";
+    }
+});
+
+// Lighting Button visibility on mobile
+function toggleVisibility() {
+    let button = document.getElementById("lights");
+    let isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    button.style.display = isMobile ? "none" : "block";
+}
+
+toggleVisibility();
+window.addEventListener("resize", toggleVisibility);
+
+
+const lightButton = document.getElementById('lights');
+let elements = document.querySelectorAll(".side-light");
+const toggleLights = () => {
+    const isSideLight = lightButton.classList.toggle("side-light");
+    elements.forEach(element => {
+        element.classList.toggle("side-light");
+    });
+    lightButton.textContent = isSideLight ? "Lighting Off" : "Lighting On";
+    localStorage.setItem("lights", lightButton.classList.contains("side-light") ? "on" : "off");
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("lights") === "on") {
+        elements.forEach(element => {
+            element.classList.add("side-light");
+        });
+        lightButton.textContent = "Lighting Off";
+    }
+    else {
+        elements.forEach(element => {
+            element.classList.remove("side-light");
+        });
+        lightButton.textContent = "Lighting On";
     }
 });
 

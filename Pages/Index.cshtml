@@ -7,20 +7,15 @@
 
 
 <div class="main">
-    <div class="main-container-mugshot">
+    <div class="main-container-mugshot side-light">
         <div class="mugshot">
             <img src="/images/me1.jpg"/>
         </div>
         <button id="theme" class="theme-button" onclick="toggleTheme()"></button>
-        <button onclick="location.href='#name'" class="link-button one">🪪</button>
-        <button onclick="location.href='#tech'" class="link-button two">🧰</button>
-        <button onclick="location.href='#about'" class="link-button three">📚</button>
-        <button onclick="location.href='#projects'" class="link-button four">📂</button>
-        <button onclick="location.href='#links'"class="link-button five">🔗</button>
-        <button onclick="location.href='#contact'" class="link-button six">📧</button>
+        <button id="lights" class="light-button" onclick="toggleLights()"></button>
 
     </div>
-    <div id="name" class="main-container">
+    <div id="name" class="main-container side-light">
     <div id="section" class="section-line slide"></div>
     <div class="section-dot slide"></div>
         <div class="main-text">
@@ -29,7 +24,7 @@
             <div class="location-title">San Diego, CA</div>
         </div>
     </div>
-    <div id="tech" class="tech">
+    <div id="tech" class="tech side-light">
         <div class="section-line slide"></div>
         <div class="section-dot slide"></div>
         <div  class="title-tech slide">
@@ -104,7 +99,7 @@
             </div>
         </div>
     </div>
-    <div class="main-about">
+    <div class="main-about side-light">
         <div class="section-line"></div>
         <div class="section-dot"></div>
         <div id="about" class="title-about slide">
@@ -113,10 +108,11 @@
         <div class="summary">
             <p class="slide"><strong class="big-text">Hi, I'm </strong><strong class="big-text-name">Joseph</strong>, an aspiring software engineer with a B.S. in Computer Science from SDSU. I have experience in <span class="fancy-text">full-stack development</span>, <span class="fancy-text">C#</span>, <span class="fancy-text">.NET</span>, and <span class="fancy-text">JavaScript</span>, along with a commitment to writing clean, maintainable code that contributes to the scalability and performance of applications.</p>
             <p class="slide"><strong class="big-text">Projects</strong> I have created include a <a class="link" href="#projects">Secure Password Manager</a> using <span class="fancy-text">.NET 8</span> and <span class="fancy-text">MySQL</span>, a <a class="link" href="#projects">Data Structures Website</a> built with <span class="fancy-text">React</span> and <span class="fancy-text">D3.js</span>, and various other projects withing <span class="fancy-text">Unity Engine</span>. I enjoy solving complex problems and continuously expanding my knowledge in software security and web development.</p>
-            <p class="slide"><strong class="big-text">Beyond coding</strong>, I love learning something new every day, whether it’s learning a second language or solving logic puzzles. I also enjoy going for runs, especially training for half marathons. I’m always open to new opportunities and collaborations, so feel free to reach out!</p>
+            <p class="slide"><strong class="big-text">Beyond coding</strong>, I love learning something new every day, whether it’s a second language or how to prepare a special meal. I also enjoy going for runs, especially training for half marathons.</p>
+            <p class="slide"><span class="fancy-text"><strong>I’m always open to new opportunities and collaborations, so feel free to reach out!</strong></span></p>
         </div>
     </div>
-    <div class="main-projects">
+    <div class="main-projects side-light">
         <div class="section-line"></div>
         <div class="section-dot"></div>
         <div id="projects" class="title-projects slide">
@@ -156,7 +152,7 @@
             </div>
         </div>
     </div>
-    <div class="main-projects">
+    <div class="main-projects side-light">
         <div class="section-line"></div>
         <div class="section-dot"></div>
         <div id="links" class="title-projects slide">
@@ -164,6 +160,9 @@
 
         </div>
         <div class="project-items">
+            <div id="email" class="pr-item-sq">
+                <a href="mailto:joseph.clifford.iv@gmail.com?subject=Inquiry About [Topic]&body=I wanted to reach out..."><img src="images/email.png" alt="email image"/></a>
+            </div>
             <div class="pr-item-sq">
                 <a href="https://github.com/jclifford4"><img src="images/github.png" alt="github image"/></a>
             </div>
@@ -189,10 +188,7 @@
             <img src="/images/email.svg" alt="email icon"/>
             <div class="email">joseph.clifford.iv@gmail.com</div>
         </div>
-        <div class="contact-group">
-            <img src="/images/phone.svg" alt="phone icon"/>
-            <div class="phone">(619) 244 - 6977</div>
-        </div>
+        
     </div>
     <div class="privacy">Made By Joseph Clifford 👍 © 2025 </div>
 </div>
