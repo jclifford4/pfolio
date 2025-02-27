@@ -36,7 +36,7 @@ window.addEventListener("resize", toggleVisibility);
 const lightButton = document.getElementById('lights');
 let elements = document.querySelectorAll(".side-light");
 const toggleLights = () => {
-    const isSideLight = lightButton.classList.contains("side-light");
+    const isSideLight = lightButton.classList.toggle("side-light");
     elements.forEach(element => {
         element.classList.toggle("side-light");
     });
