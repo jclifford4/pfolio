@@ -4,3 +4,4 @@
 /obj
 /imgs/
 *Context-*
+.env

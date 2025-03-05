@@ -976,22 +976,79 @@ body,
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  height: 110px;
+  justify-content: start;
+  align-items: center;
+  height: 300px;
   margin-bottom: .1rem;
   gap: .5rem;
   width: 100%;
-  max-width: 320px;
+  height: auto;
+  max-width: 480px;
   border-radius: 5px;
   background-color: var(--secondary-color);
+}
+
+.subform-div {
+  position: relative;
+}
+
+#status {
+  color: var(--conic-color1);
+}
+
+label {
+  color: var(--text-color);
+  position: absolute;
+  left: 50%;
+  top: -15px;
+  translate: -50% -50%;
+}
+
+.form-email {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0 2rem 0;
+}
+
+
+.form-email input {
+  border-radius: 10px;
+  height: 35px;
+  width: 250px;
+  background: var(--text-color);
+  color: var(--bg-color);
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.form-email textarea {
+  background: var(--text-color);
+  color: var(--bg-color);
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.form-email button {
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 80px;
+  background-color: var(--conic-color1);
+  color: var(--bg-color);
 }
 
 .title-contact {
   position: absolute;
   font-weight: 500;
   font-size: large;
-  top: 15%;
+  top: 20px;
   left: 50px;
   color: var(--text-color);
   translate: -50% -50%;
@@ -1031,6 +1088,8 @@ body,
 .title-main {
   display: none;
 }
+
+
 
 @keyframes spin {
   from {
@@ -1377,6 +1436,22 @@ body,
   .main-container-mugshot::before,
   .main-container-mugshot::after {
     background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
+  }
+
+  .form-email {
+    gap: 3rem;
+    padding: 4rem 0 4rem 0;
+    font-size: larger;
+  }
+
+  .form-email textarea {
+    width: 500px;
+    padding: 1rem;
+  }
+
+  .form-email button {
+    width: 100px;
+    height: 40px;
   }
 
   .privacy {

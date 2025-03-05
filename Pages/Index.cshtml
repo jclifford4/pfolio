@@ -183,12 +183,59 @@
         </div>
         <div id="contact" class="title-contact">
             Contact
-        </div>
-        <div class="contact-group">
-            <img src="/images/email.svg" alt="email icon"/>
-            <div class="email">joseph.clifford.iv@gmail.com</div>
-        </div>
-        
-    </div>
-    <div class="privacy">Made By Joseph Clifford 👍 © 2025 </div>
+        </div>        
+        <form id="contact-form" method="post" class="form-email">
+            <div class="subform-div">
+                <label for="email">Email:</label>
+                <input type="email" id="email1" name="email" required autocomplete="false" />
+            </div>
+            <div class="subform-div">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required autocomplete="false" />
+            </div>
+            <div class="subform-div">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button id="submit-btn" type="submit">Send</button>
+        </form>
+        <p id="status"></p>
 </div>
+<div class="privacy">Made By Joseph Clifford 👍 © 2025 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        let lastSent = localStorage.getItem("lastSentTime");
+        let now = new Date().getTime();
+
+        if (lastSent && now - lastSent < 3600000) {
+            document.getElementById("status").innerText = "You can only send one email per hour.";
+            return;
+        }
+
+        (function(){
+            emailjs.init({
+                publicKey: "rqhJZqYYKCC-W10nM",
+            });
+        })();
+
+        emailjs.sendForm('service_p2ddn37', 'template_nfpq7sr', this)
+        .then(
+        function(response) {
+            document.getElementById("status").innerText = "Message sent successfully!";
+
+            // Save timestamp only if the email is successfully sent
+            localStorage.setItem("lastSentTime", now);
+        },
+        function(error) {
+            document.getElementById("status").innerText = "Error sending message. Try again.";
+        }
+        );
+    });
+</script>
+
+ 
