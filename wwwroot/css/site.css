@@ -775,12 +775,13 @@ body,
 }
 
 .main-projects.side-light::after,
-.main-projects.side-light::before {
+.main-projects.side-light::before,
+.contact-box.side-light::before,
+.contact-box.side-light::after {
   content: '';
   position: absolute;
   height: calc(100% + 2px);
   width: calc(100% + 2px);
-
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -790,12 +791,15 @@ body,
 }
 
 .main-projects.side-light:hover::after,
-.main-projects.side-light:hover::before {
+.main-projects.side-light:hover::before,
+.contact-box.side-light:hover::before,
+.contact-box.side-light:hover::after {
   opacity: .1;
   animation: fadeOut .5s ease-in-out forwards, spin 6s linear infinite;
 }
 
 .main-projects.side-light::before,
+.contact-box.side-light::before,
 .languages::before {
   filter: blur(1rem);
   opacity: 0.5;
@@ -984,7 +988,7 @@ body,
   width: 100%;
   height: auto;
   max-width: 480px;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: var(--secondary-color);
 }
 
@@ -1434,7 +1438,9 @@ label {
   .main-projects::before,
   .main-projects::after,
   .main-container-mugshot::before,
-  .main-container-mugshot::after {
+  .main-container-mugshot::after,
+  .contact-box::before,
+  .contact-box::after {
     background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
   }
 
@@ -1851,7 +1857,9 @@ label {
   .project-items::before,
   .project-items::after,
   .main-projects::before,
-  .main-projects::after {
+  .main-projects::after,
+  .contact-box::before,
+  .contact-box::after {
     background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
   }
 
@@ -1960,7 +1968,9 @@ label {
   .project-items::before,
   .project-items::after,
   .main-projects::before,
-  .main-projects::after {
+  .main-projects::after,
+  .contact-box::before,
+  .contact-box::after {
     background-image: conic-gradient(from var(--angle), transparent, var(--conic-color1), transparent, var(--conic-color2));
   }
 
