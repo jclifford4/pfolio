@@ -211,9 +211,10 @@
 
         let lastSent = localStorage.getItem("lastSentTime");
         let now = new Date().getTime();
+        let dayInSeconds =  86400 * 1000;
 
-        if (lastSent && now - lastSent < 3600000) {
-            document.getElementById("status").innerText = "You can only send one email per hour.";
+        if (lastSent && now - lastSent < dayInSeconds) {
+            document.getElementById("status").innerText = "You can only send one email per day.";
             return;
         }
 
