@@ -6,6 +6,7 @@ const toggleTheme = () => {
     localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
 };
 
+
 // Apply saved theme on page load
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("theme") === "light") {
@@ -48,6 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     else {
         lightButton.textContent = "Lighting On";
+        elements.forEach(element => {
+            element.classList.remove("side-light");
+        });
     }
 });
 
